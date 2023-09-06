@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const CardCommentaire = ({ user, message, creationdate }) => {
+const CardCommentaire = ({ user, content, creationdate }) => {
   return (
     <div className="flex flex-col">
       <div className="flex justify-between items-center">
@@ -8,7 +8,7 @@ const CardCommentaire = ({ user, message, creationdate }) => {
         <p>{creationdate}</p>
       </div>
       <div>
-        <p>{message}</p>
+        <p>{content}</p>
       </div>
     </div>
   );
@@ -16,13 +16,13 @@ const CardCommentaire = ({ user, message, creationdate }) => {
 
 CardCommentaire.propTypes = {
   user: PropTypes.string,
-  message: PropTypes.string,
+  content: PropTypes.string,
   creationdate: PropTypes.instanceOf(Date),
 };
 
 CardCommentaire.defaultProps = {
   user: "user",
-  message: "message",
+  content: "content",
   creationdate: "creationdate",
 };
 

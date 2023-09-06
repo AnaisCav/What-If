@@ -8,7 +8,7 @@ const Forum = () => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/posts`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/message`)
       .then((response) => {
         setPosts(response.data);
       })
@@ -26,7 +26,7 @@ const Forum = () => {
             <CardCommentaire
               key={post.id}
               user={post.user}
-              message={post.message}
+              content={post.content}
               creationdate={post.creationdate}
             />
           ))}
