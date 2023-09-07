@@ -1,9 +1,14 @@
-const Histoire = () => {
+const Histoire = ({ labyrintheToggle }) => {
   const closeModal = () => {
     window.histoire.close();
   };
   return (
-    <dialog id="histoire" className="modal min-w-96">
+    <dialog
+      id="histoire"
+      className={`" modal min-w-96 " ${
+        labyrintheToggle && "animate-spin-slow "
+      }`}
+    >
       <form
         method="dialog"
         className="modal-box bg-primary h-[36rem] text-black mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-4 border-2 border-accent rounded-none"

@@ -3,8 +3,8 @@ import React from "react";
 const CommentForm = ({ labyrintheToggle }) => {
   return (
     <div
-      className={`"flex items-center justify-center shadow-lg mt-56 mx-8 mb-4 rotate-90 self-start" ${
-        labyrintheToggle && "rotate-90"
+      className={`"flex items-center justify-center shadow-lg mt-56 mx-8 mb-4 " ${
+        labyrintheToggle && "animate-spin-slow"
       }`}
     >
       <form className="w-full  bg-white rounded-lg px-4 pt-2 ">

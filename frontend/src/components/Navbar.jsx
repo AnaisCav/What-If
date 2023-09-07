@@ -6,7 +6,7 @@ const Navbar = ({ labyrintheToggle }) => {
   return (
     <nav
       className={`"navbar py-4 flex justify-between bg-secondary drop-shadow-xly" ${
-        labyrintheToggle && "rotate-90"
+        labyrintheToggle && "animate-spin-slow"
       }`}
     >
       <img src={logo} alt="Logo" className="h-20" />
