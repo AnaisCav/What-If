@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import Histoire from "./Histoire";
 
-const Description = ({ labyrintheToggle, mauvaisGoutToggle }) => {
+const Description = ({ labyrintheToggle, mauvaisGoutToggle, aLenver }) => {
   const openModal = () => {
     window.histoire.showModal();
   };
@@ -57,6 +57,7 @@ const Description = ({ labyrintheToggle, mauvaisGoutToggle }) => {
       <Histoire
         labyrintheToggle={labyrintheToggle}
         mauvaisGoutToggle={mauvaisGoutToggle}
+        aLenver={aLenver}
       />
     </div>
   );

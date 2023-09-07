@@ -46,6 +46,7 @@ function App() {
       <Description
         labyrintheToggle={labyrintheToggle}
         mauvaisGoutToggle={mauvaisGoutToggle}
+        aLenver={aLenver}
       />
       <Forum
         labyrintheToggle={labyrintheToggle}
