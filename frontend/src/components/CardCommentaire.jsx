@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 
@@ -9,6 +9,7 @@ const CardCommentaire = ({
   id,
   posts,
   setPosts,
+  mauvaisGoutToggle,
 }) => {
   const [isModify, setIsModify] = useState(false);
   const [updateContent, setUpdateContent] = useState(content);
@@ -57,7 +58,12 @@ const CardCommentaire = ({
   };
 
   return (
-    <div className="flex flex-col text-black py-4 mt-8 lg:mt-20 mx-4 lg:mx-0 px-4 lg:px-10 border-2 border-accent rounded-2xl">
+    <div
+      className={`" flex flex-col text-black py-4 mt-8 lg:mt-20 mx-4 lg:mx-0 px-4 lg:px-10 border-2 border-accent rounded-2xl " ${
+        mauvaisGoutToggle &&
+        "text-yellow-300 rounded-full border-8 border-white border-b-2"
+      }`}
+    >
       <div className="flex justify-between items-center font-megrim font-bold text-xl lg:text-2xl border-b-2 border-accent pb-2 lg:pb-6">
         <h1>{user}</h1>
         <p>{creationdate.split("T")[0]}</p>
@@ -106,6 +112,7 @@ CardCommentaire.propTypes = {
   user: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   creationdate: PropTypes.string.isRequired,
+  mauvaisGoutToggle: PropTypes.bool.isRequired,
   id: PropTypes.number.isRequired,
   posts: PropTypes.array.isRequired,
   setPosts: PropTypes.func.isRequired,

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import PropTypes from "prop-types";
+
+import { useState } from "react";
 import axios from "axios";
 
-
-const CommentForm = ({ labyrintheToggle }) => {
+const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle }) => {
   const [content, setContent] = useState("");
   const [user, setUser] = useState("");
 
@@ -33,12 +34,14 @@ const CommentForm = ({ labyrintheToggle }) => {
   };
 
   return (
-    <div className="flex items-center justify-center shadow-lg mt-56 mx-8 mb-4" ${
+    <div
+      id="commentaires"
+      className={`" flex items-center justify-center shadow-lg mt-56 mx-8 mb-4 " ${
         labyrintheToggle && "animate-spin-slow"
-      }`}>
-      <form className="w-full bg-white rounded-lg px-4 pt-2">
-        <div className="flex flex-wrap -mx-3 mb-6">
-
+      } ${mauvaisGoutToggle && ""}`}
+    >
+      <form className="w-full  bg-white rounded-lg px-4 pt-2 ">
+        <div className="flex flex-wrap -mx-3 mb-6 ">
           <h2 className="px-4 pt-3 pb-2 text-gray-800 text-lg">
             Poste ton commentaire
           </h2>
@@ -78,6 +81,11 @@ const CommentForm = ({ labyrintheToggle }) => {
       </form>
     </div>
   );
+};
+
+CommentForm.propTypes = {
+  labyrintheToggle: PropTypes.bool.isRequired,
+  mauvaisGoutToggle: PropTypes.bool.isRequired,
 };
 
 export default CommentForm;

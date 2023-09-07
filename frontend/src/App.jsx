@@ -9,22 +9,42 @@ import CommentForm from "./components/CommentForm";
 
 function App() {
   const [labyrintheToggle, setLabyrintheToggle] = useState(false);
+  const [mauvaisGoutToggle, setMauvaisGoutToggle] = useState(false);
+
   const handleLabyrintheClick = () => {
     setLabyrintheToggle(!labyrintheToggle);
   };
+
   return (
-    <div>
+    <div className={`"" ${mauvaisGoutToggle && " bg-lime-900"}`}>
       <div className="sticky top-0 w-full z-50">
-        <Navbar labyrintheToggle={labyrintheToggle} />
+        <Navbar
+          labyrintheToggle={labyrintheToggle}
+          mauvaisGoutToggle={mauvaisGoutToggle}
+        />
         <Toggle
           labyrintheToggle={labyrintheToggle}
           onLabyrintheButtonClick={handleLabyrintheClick}
+          mauvaisGoutToggle={mauvaisGoutToggle}
+          setMauvaisGoutToggle={setMauvaisGoutToggle}
         />
       </div>
-      <Description labyrintheToggle={labyrintheToggle} />
-      <Forum labyrintheToggle={labyrintheToggle} />
-      <CommentForm labyrintheToggle={labyrintheToggle} />
-      <Footer labyrintheToggle={labyrintheToggle} />
+      <Description
+        labyrintheToggle={labyrintheToggle}
+        mauvaisGoutToggle={mauvaisGoutToggle}
+      />
+      <Forum
+        labyrintheToggle={labyrintheToggle}
+        mauvaisGoutToggle={mauvaisGoutToggle}
+      />
+      <CommentForm
+        labyrintheToggle={labyrintheToggle}
+        mauvaisGoutToggle={mauvaisGoutToggle}
+      />
+      <Footer
+        labyrintheToggle={labyrintheToggle}
+        mauvaisGoutToggle={mauvaisGoutToggle}
+      />
     </div>
   );
 }
