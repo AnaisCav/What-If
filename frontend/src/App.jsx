@@ -8,7 +8,7 @@ import CommentForm from "./components/CommentForm";
 
 function App() {
   return (
-    <div className="w-full h-full  bg-primary">
+    <div className="w-full h-full bg-primary ">
       <Navbar />
       <Toggle />
       <Description />;
