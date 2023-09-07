@@ -1,19 +1,18 @@
+import PropTypes from "prop-types";
 import { Link } from "react-scroll";
 
 import logo from "../assets/images/logo2.png";
 
-const Navbar = ({ labyrintheToggle }) => {
+const Navbar = ({ labyrintheToggle, mauvaisGoutToggle }) => {
   return (
     <nav
-      className={`${
-        labyrintheToggle
-          ? "navbar py-4 flex justify-between bg-secondary drop-shadow-xl rotate-90 self-start"
-          : "navbar py-4 flex justify-between bg-secondary drop-shadow-xly"
-      }`}
+      className={`" navbar py-4 flex justify-between bg-secondary " ${
+        labyrintheToggle && "animate-spin-slow"
+      } ${mauvaisGoutToggle && " bg-pink-800 hover:text-red-700 "}`}
     >
       <img src={logo} alt="Logo" className="h-20" />
 
-      <ul className="hidden lg:flex gap-14 font-megrim text-accent font-extrabold text-2xl pr-8 ">
+      <ul className="hidden md:flex gap-14 font-megrim text-accent font-bold text-2xl pr-8 ">
         <Link
           to="description"
           spy={true}
@@ -106,6 +105,11 @@ const Navbar = ({ labyrintheToggle }) => {
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  labyrintheToggle: PropTypes.bool.isRequired,
+  mauvaisGoutToggle: PropTypes.bool.isRequired,
 };
 
 export default Navbar;
