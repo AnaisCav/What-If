@@ -4,6 +4,8 @@ import Description from "../src/components/Description";
 import Forum from "./components/Forum";
 import { useState } from "react";
 import "./index.css";
+import Footer from "./components/ Footer";
+import CommentForm from "./components/CommentForm";
 
 function App() {
   const [labyrintheToggle, setLabyrintheToggle] = useState(false);
@@ -11,18 +13,18 @@ function App() {
     setLabyrintheToggle(!labyrintheToggle);
   };
   return (
-    <div
-      className={`${
-        labyrintheToggle ? "" : "w-screen min-h-screen  bg-primary"
-      }`}
-    >
-      <Navbar labyrintheToggle={labyrintheToggle} />
-      <Toggle
-        labyrintheToggle={labyrintheToggle}
-        onLabyrintheButtonClick={handleLabyrintheClick}
-      />
+    <div className="relative w-screen min-h-screen bg-primary">
+      <div className="sticky top-0 w-full z-50">
+        <Navbar labyrintheToggle={labyrintheToggle} />
+        <Toggle
+          labyrintheToggle={labyrintheToggle}
+          onLabyrintheButtonClick={handleLabyrintheClick}
+        />
+      </div>
       <Description labyrintheToggle={labyrintheToggle} />
       <Forum labyrintheToggle={labyrintheToggle} />
+      <CommentForm />
+      <Footer />
     </div>
   );
 }
