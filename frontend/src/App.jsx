@@ -9,9 +9,12 @@ import CommentForm from "./components/CommentForm";
 
 function App() {
   const [labyrintheToggle, setLabyrintheToggle] = useState(false);
+  const [mauvaisGoutToggle, setMauvaisGoutToggle] = useState(false);
+
   const handleLabyrintheClick = () => {
     setLabyrintheToggle(!labyrintheToggle);
   };
+
   return (
     <div className="relative w-screen min-h-screen bg-primary">
       <div className="sticky top-0 w-full z-50">
@@ -19,9 +22,14 @@ function App() {
         <Toggle
           labyrintheToggle={labyrintheToggle}
           onLabyrintheButtonClick={handleLabyrintheClick}
+          mauvaisGoutToggle={mauvaisGoutToggle}
+          setMauvaisGoutToggle={setMauvaisGoutToggle}
         />
       </div>
-      <Description labyrintheToggle={labyrintheToggle} />
+      <Description
+        labyrintheToggle={labyrintheToggle}
+        mauvaisGoutToggle={mauvaisGoutToggle}
+      />
       <Forum labyrintheToggle={labyrintheToggle} />
       <CommentForm />
       <Footer />

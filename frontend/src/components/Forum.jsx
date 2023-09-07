@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import axios from "axios";
 
 import CardCommentaire from "./CardCommentaire";
@@ -40,6 +42,11 @@ const Forum = ({ labyrintheToggle }) => {
       </div>
     </div>
   );
+};
+
+Forum.propTypes = {
+  labyrintheToggle: PropTypes.bool.isRequired,
+  onLabyrintheButtonClick: PropTypes.func,
 };
 
 export default Forum;
