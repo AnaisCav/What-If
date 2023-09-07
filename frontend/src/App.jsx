@@ -13,7 +13,7 @@ function App() {
     setLabyrintheToggle(!labyrintheToggle);
   };
   return (
-    <div className="relative w-screen min-h-screen bg-primary">
+    <div>
       <div className="sticky top-0 w-full z-50">
         <Navbar labyrintheToggle={labyrintheToggle} />
         <Toggle
@@ -23,8 +23,8 @@ function App() {
       </div>
       <Description labyrintheToggle={labyrintheToggle} />
       <Forum labyrintheToggle={labyrintheToggle} />
-      <CommentForm />
-      <Footer />
+      <CommentForm labyrintheToggle={labyrintheToggle} />
+      <Footer labyrintheToggle={labyrintheToggle} />
     </div>
   );
 }

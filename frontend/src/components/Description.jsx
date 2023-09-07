@@ -8,10 +8,8 @@ const Description = ({ labyrintheToggle }) => {
   return (
     <div
       id="description"
-      className={`${
-        labyrintheToggle
-          ? "text-black lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent  rounded-2xl transform rotate-90 self-end"
-          : "text-black mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent rounded-2xl"
+      className={`"text-black mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent rounded-2xl" ${
+        labyrintheToggle && "animate-spin-slow"
       }`}
     >
       <h1 className="font-megrim text-4xl lg:text-5xl font-bold lg:px-16 mb-4 text-center lg:text-left">
@@ -51,7 +49,7 @@ const Description = ({ labyrintheToggle }) => {
       >
         En savoir plus &gt;&gt;
       </button>
-      <Histoire />
+      <Histoire labyrintheToggle={labyrintheToggle} />
     </div>
   );
 };

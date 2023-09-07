@@ -1,15 +1,11 @@
-import React, { useState } from "react";
-
 const Toggle = ({ labyrintheToggle, onLabyrintheButtonClick }) => {
   const handleLabyrintheClick = () => {
     onLabyrintheButtonClick(!labyrintheToggle);
   };
   return (
     <div
-      className={`${
-        labyrintheToggle
-          ? "z-1 flex justify-around bg-primary pt-2 pb-4 drop-shadow-xl rotate-90 self-start"
-          : "z-1 flex justify-around bg-primary pt-2 pb-4 drop-shadow-xl"
+      className={`"z-1 flex justify-around bg-primary pt-2 pb-4 drop-shadow-xl" ${
+        labyrintheToggle && "animate-spin-slow"
       }`}
     >
       <div className="flex flex-col items-center">
