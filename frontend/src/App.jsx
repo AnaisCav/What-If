@@ -16,9 +16,12 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={`"" ${mauvaisGoutToggle && " bg-lime-900"}`}>
       <div className="sticky top-0 w-full z-50">
-        <Navbar labyrintheToggle={labyrintheToggle} />
+        <Navbar
+          labyrintheToggle={labyrintheToggle}
+          mauvaisGoutToggle={mauvaisGoutToggle}
+        />
         <Toggle
           labyrintheToggle={labyrintheToggle}
           onLabyrintheButtonClick={handleLabyrintheClick}

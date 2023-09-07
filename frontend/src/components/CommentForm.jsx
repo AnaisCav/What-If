@@ -6,7 +6,7 @@ const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle }) => {
       id="commentaires"
       className={`" flex items-center justify-center shadow-lg mt-56 mx-8 mb-4 " ${
         labyrintheToggle && "animate-spin-slow"
-      } ${mauvaisGoutToggle && "bg-blue-500 "}`}
+      } ${mauvaisGoutToggle && ""}`}
     >
       <form className="w-full  bg-white rounded-lg px-4 pt-2 ">
         <div className="flex flex-wrap -mx-3 mb-6 ">

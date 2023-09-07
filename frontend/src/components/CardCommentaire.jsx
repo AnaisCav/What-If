@@ -1,8 +1,18 @@
 import PropTypes from "prop-types";
 
-const CardCommentaire = ({ user, content, creationdate }) => {
+const CardCommentaire = ({
+  user,
+  content,
+  creationdate,
+  mauvaisGoutToggle,
+}) => {
   return (
-    <div className="flex flex-col text-black py-4 mt-8 lg:mt-20 mx-4 lg:mx-0 px-4 lg:px-10 border-2 border-accent rounded-2xl">
+    <div
+      className={`" flex flex-col text-black py-4 mt-8 lg:mt-20 mx-4 lg:mx-0 px-4 lg:px-10 border-2 border-accent rounded-2xl " ${
+        mauvaisGoutToggle &&
+        "text-yellow-300 rounded-full border-8 border-white border-b-2"
+      }`}
+    >
       <div className="flex justify-between items-center font-megrim font-bold text-xl lg:text-2xl border-b-2 border-accent pb-2 lg:pb-6">
         <h1>{user}</h1>
         <p>{creationdate.split("T")[0]}</p>
@@ -18,6 +28,7 @@ CardCommentaire.propTypes = {
   user: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   creationdate: PropTypes.string.isRequired,
+  mauvaisGoutToggle: PropTypes.bool.isRequired,
 };
 
 export default CardCommentaire;

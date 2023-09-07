@@ -38,6 +38,7 @@ const Forum = ({ labyrintheToggle, mauvaisGoutToggle }) => {
               user={post.user}
               content={post.content}
               creationdate={post.creationdate}
+              mauvaisGoutToggle={mauvaisGoutToggle}
             />
           ))}
       </div>

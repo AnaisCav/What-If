@@ -8,11 +8,11 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle }) => {
     <nav
       className={`" navbar py-4 flex justify-between bg-secondary " ${
         labyrintheToggle && "animate-spin-slow"
-      } ${mauvaisGoutToggle && "bg-black flex"}`}
+      } ${mauvaisGoutToggle && " bg-pink-800 hover:text-red-700 "}`}
     >
       <img src={logo} alt="Logo" className="h-20" />
 
-      <ul className="hidden md:flex gap-14 font-megrim text-accent font-extrabold text-2xl pr-8 ">
+      <ul className="hidden md:flex gap-14 font-megrim text-accent font-bold text-2xl pr-8 ">
         <Link
           to="description"
           spy={true}
