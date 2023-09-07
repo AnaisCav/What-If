@@ -1,6 +1,8 @@
+import PropTypes from "prop-types";
+
 import Histoire from "./Histoire";
 
-const Description = ({ labyrintheToggle }) => {
+const Description = ({ labyrintheToggle, mauvaisGoutToggle }) => {
   const openModal = () => {
     window.histoire.showModal();
   };
@@ -8,11 +10,14 @@ const Description = ({ labyrintheToggle }) => {
   return (
     <div
       id="description"
-      className={`"text-black mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent rounded-2xl" ${
+      className={`" text-black mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent rounded-2xl " ${
         labyrintheToggle && "animate-spin-slow"
+      } ${
+        mauvaisGoutToggle &&
+        "lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-blue-200 bg-green-100  rounded-2xl text-yellow-300 flex "
       }`}
     >
-      <h1 className="font-megrim text-4xl lg:text-5xl font-bold lg:px-16 mb-4 text-center lg:text-left">
+      <h1 className="font-megrim text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">
         Notre histoire
       </h1>
       <div className="rounded-box font-roboto text-lg lg:text-2xl">
@@ -49,9 +54,17 @@ const Description = ({ labyrintheToggle }) => {
       >
         En savoir plus &gt;&gt;
       </button>
-      <Histoire labyrintheToggle={labyrintheToggle} />
+      <Histoire
+        labyrintheToggle={labyrintheToggle}
+        mauvaisGoutToggle={mauvaisGoutToggle}
+      />
     </div>
   );
+};
+
+Description.propTypes = {
+  labyrintheToggle: PropTypes.bool.isRequired,
+  mauvaisGoutToggle: PropTypes.bool.isRequired,
 };
 
 export default Description;

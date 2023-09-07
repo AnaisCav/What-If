@@ -13,8 +13,8 @@ class MessagesManager extends AbstractManager {
   }
   update(message) {
     return this.database.query(
-      `UPDATE ${this.table} SET user = ?, content = ? WHERE id = ?`,
-      [message.user, message.content, message.id]
+      `UPDATE ${this.table} SET content = ? WHERE id = ?`,
+      [message.content, message.id]
     );
   }
 }

@@ -20,7 +20,7 @@ function InverseMouseCursor() {
     <img
       src={cursorLol}
       alt="Souris personnalisée"
-      className="fixed w-32 h-32 transform"
+      className="fixed w-32 h-32 transform z-10"
       style={{
         left: `${cursorX}px`,
         top: `${cursorY}px`,
