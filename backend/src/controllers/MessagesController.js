@@ -16,7 +16,7 @@ const getPost = async (req, res) => {
     if (post) {
       res.json(post);
     } else {
-      res.status(404).json({ error: "Post not found" });
+      res.status(404).json({ error: "osef" });
     }
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -35,4 +35,38 @@ const createPost = (req, res) => {
       res.status(500).json({ error: err.message });
     });
 };
-module.exports = { getAllPosts, getPost, createPost };
+const deletePost = (req, res) => {
+  models.message
+    .delete(req.params.id)
+    .then(([result]) => {
+      if (result.affectedRows === 0) {
+        res.sendStatus(404);
+      } else {
+        res.sendStatus(204);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+const editPost = (req, res) => {
+  const item = req.body;
+  item.id = parseInt(req.params.id, 10);
+
+  models.message
+    .update(item)
+    .then(([result]) => {
+      if (result.affectedRows === 0) {
+        res.sendStatus(404);
+      } else {
+        res.sendStatus(204);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
+module.exports = { getAllPosts, getPost, createPost, deletePost, editPost };
