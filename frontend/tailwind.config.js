@@ -6,6 +6,9 @@ export default {
       animation: {
         "spin-slow": "spin 10s linear infinite",
       },
+      cursor: {
+        none: "none",
+      },
     },
     fontFamily: {
       roboto: ["Roboto"],
