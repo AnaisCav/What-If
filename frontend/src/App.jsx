@@ -15,6 +15,8 @@ function App() {
 
   const [mauvaisGoutToggle, setMauvaisGoutToggle] = useState(false);
 
+  const [zoomToggle, setZoomToggle] = useState(false);
+
   const handleLabyrintheClick = () => {
     setLabyrintheToggle(!labyrintheToggle);
   };
@@ -32,6 +34,7 @@ function App() {
         <Navbar
           labyrintheToggle={labyrintheToggle}
           mauvaisGoutToggle={mauvaisGoutToggle}
+          zoomToggle={zoomToggle}
         />
         <Toggle
           labyrintheToggle={labyrintheToggle}
@@ -40,6 +43,8 @@ function App() {
           setMauvaisGoutToggle={setMauvaisGoutToggle}
           aLenver={aLenver}
           onALenverButtonClick={handleALenverClick}
+          zoomToggle={zoomToggle}
+          setZoomToggle={setZoomToggle}
         />
       </div>
       {aLenver && <InverseMouseCursor />} {InverseMouseCursor}
@@ -47,18 +52,22 @@ function App() {
         labyrintheToggle={labyrintheToggle}
         mauvaisGoutToggle={mauvaisGoutToggle}
         aLenver={aLenver}
+        zoomToggle={zoomToggle}
       />
       <Forum
         labyrintheToggle={labyrintheToggle}
         mauvaisGoutToggle={mauvaisGoutToggle}
+        zoomToggle={zoomToggle}
       />
       <CommentForm
         labyrintheToggle={labyrintheToggle}
         mauvaisGoutToggle={mauvaisGoutToggle}
+        zoomToggle={zoomToggle}
       />
       <Footer
         labyrintheToggle={labyrintheToggle}
         mauvaisGoutToggle={mauvaisGoutToggle}
+        zoomToggle={zoomToggle}
       />
     </div>
   );

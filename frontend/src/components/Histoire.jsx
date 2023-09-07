@@ -1,6 +1,11 @@
 import PropTypes from "prop-types";
 
-const Histoire = ({ labyrintheToggle, mauvaisGoutToggle, aLenver }) => {
+const Histoire = ({
+  labyrintheToggle,
+  mauvaisGoutToggle,
+  aLenver,
+  zoomToggle,
+}) => {
   const closeModal = () => {
     window.histoire.close();
   };
@@ -10,7 +15,7 @@ const Histoire = ({ labyrintheToggle, mauvaisGoutToggle, aLenver }) => {
       className={`" modal min-w-96 " ${
         labyrintheToggle && "animate-spin-slow "
       } ${mauvaisGoutToggle && "text-white bg-yellow-200 bg-opacity-60"}
-      ${aLenver && "rotate-180"}`}
+      ${aLenver && "rotate-180"} ${zoomToggle && "text-9xl"}`}
     >
       <form
         method="dialog"
@@ -124,6 +129,7 @@ const Histoire = ({ labyrintheToggle, mauvaisGoutToggle, aLenver }) => {
 Histoire.propTypes = {
   labyrintheToggle: PropTypes.bool.isRequired,
   mauvaisGoutToggle: PropTypes.bool.isRequired,
+  zoomToggle: PropTypes.bool.isRequired,
 };
 
 export default Histoire;
