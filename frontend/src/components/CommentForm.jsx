@@ -1,8 +1,10 @@
-const CommentForm = () => {
+const CommentForm = ({ labyrintheToggle }) => {
   return (
     <div
       id="commentaires"
-      className="flex items-center justify-center shadow-lg mt-56 mx-8 mb-4 "
+      className={`"flex items-center justify-center shadow-lg mt-56 mx-8 mb-4 rotate-90 self-start" ${
+        labyrintheToggle && "rotate-90"
+      }`}
     >
       <form className="w-full  bg-white rounded-lg px-4 pt-2 ">
         <div className="flex flex-wrap -mx-3 mb-6 ">

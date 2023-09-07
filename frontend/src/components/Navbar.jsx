@@ -6,10 +6,8 @@ import logo from "../assets/images/logo2.png";
 const Navbar = ({ labyrintheToggle }) => {
   return (
     <nav
-      className={`${
-        labyrintheToggle
-          ? "navbar py-4 flex justify-between bg-secondary drop-shadow-xl rotate-90 self-start"
-          : "navbar py-4 flex justify-between bg-secondary drop-shadow-xly"
+      className={`"navbar py-4 flex justify-between bg-secondary drop-shadow-xly" ${
+        labyrintheToggle && "rotate-90"
       }`}
     >
       <img src={logo} alt="Logo" className="h-20" />
