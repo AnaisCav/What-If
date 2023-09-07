@@ -11,12 +11,12 @@ class MessagesManager extends AbstractManager {
       [message.user, message.content]
     );
   }
-  // create = ({ user, content, creationdate }) => {
-  //   return this.database.query(
-  //     `insert into ${this.table} (user, content, creationdate) values (?, ?, ?)`,
-  //     [user, content, creationdate]
-  //   );
-  // };
+  update(message) {
+    return this.database.query(
+      `UPDATE ${this.table} SET user = ?, content = ? WHERE id = ?`,
+      [message.user, message.content, message.id]
+    );
+  }
 }
 
 module.exports = MessagesManager;

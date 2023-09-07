@@ -4,6 +4,8 @@ import Description from "../src/components/Description";
 import Forum from "./components/Forum";
 
 import "./index.css";
+import Footer from "./components/ Footer";
+import CommentForm from "./components/CommentForm";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       </div>
       <Description />;
       <Forum />
+      <CommentForm />
+      <Footer />
     </div>
   );
 }
