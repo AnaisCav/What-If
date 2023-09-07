@@ -1,9 +1,9 @@
-import React from "react";
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="navbar flex justify-between bg-secondary">
-      <a className="btn btn-ghost normal-case text-xl ">daisyUI</a>
+    <div className="navbar flex justify-between bg-primary">
+      <img src={logo} alt="Logo" className="h-20" />
 
       <ul className="menu menu-horizontal bg-base-200 rounded-box  ">
         <li>
