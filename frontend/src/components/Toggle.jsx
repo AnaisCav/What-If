@@ -16,7 +16,7 @@ const Toggle = ({
 
   return (
     <div
-      className={`"z-1 flex justify-around bg-primary pt-2 pb-4 drop-shadow-xl" ${
+      className={`" z-1 flex justify-around bg-primary pt-2 pb-4 drop-shadow-xl text-black " ${
         labyrintheToggle && "rotate-90"
       } ${
         mauvaisGoutToggle &&

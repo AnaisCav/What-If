@@ -30,9 +30,18 @@ function App() {
         labyrintheToggle={labyrintheToggle}
         mauvaisGoutToggle={mauvaisGoutToggle}
       />
-      <Forum labyrintheToggle={labyrintheToggle} />
-      <CommentForm labyrintheToggle={labyrintheToggle} />
-      <Footer labyrintheToggle={labyrintheToggle} />
+      <Forum
+        labyrintheToggle={labyrintheToggle}
+        mauvaisGoutToggle={mauvaisGoutToggle}
+      />
+      <CommentForm
+        labyrintheToggle={labyrintheToggle}
+        mauvaisGoutToggle={mauvaisGoutToggle}
+      />
+      <Footer
+        labyrintheToggle={labyrintheToggle}
+        mauvaisGoutToggle={mauvaisGoutToggle}
+      />
     </div>
   );
 }

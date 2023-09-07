@@ -5,7 +5,7 @@ import axios from "axios";
 import CardCommentaire from "./CardCommentaire";
 import { useEffect, useState } from "react";
 
-const Forum = ({ labyrintheToggle }) => {
+const Forum = ({ labyrintheToggle, mauvaisGoutToggle }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -20,8 +20,11 @@ const Forum = ({ labyrintheToggle }) => {
   return (
     <div
       id="forum"
-      className={`"text-black py-8 mt-8 lg:mt-20 mx-4 lg:mx-16 px-4 lg:px-16 text-justify border-2 border-accent rounded-2xl" ${
+      className={`" text-black py-8 mt-8 lg:mt-20 mx-4 lg:mx-16 px-4 lg:px-16 text-justify border-2 border-accent rounded-2xl " ${
         labyrintheToggle && "rotate-90"
+      } ${
+        mauvaisGoutToggle &&
+        " text-orange-300 bg-red-200 py-8 mt-8 lg:mt-20 mx-4 lg:mx-16 px-4 lg:px-16 text-justify border-8 border-green-200 rounded-none"
       }`}
     >
       <h1 className="font-megrim text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">
@@ -44,7 +47,7 @@ const Forum = ({ labyrintheToggle }) => {
 
 Forum.propTypes = {
   labyrintheToggle: PropTypes.bool.isRequired,
-  onLabyrintheButtonClick: PropTypes.func,
+  mauvaisGoutToggle: PropTypes.bool.isRequired,
 };
 
 export default Forum;

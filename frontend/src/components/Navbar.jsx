@@ -3,12 +3,12 @@ import { Link } from "react-scroll";
 
 import logo from "../assets/images/logo2.png";
 
-const Navbar = ({ labyrintheToggle }) => {
+const Navbar = ({ labyrintheToggle, mauvaisGoutToggle }) => {
   return (
     <nav
-      className={`"navbar py-4 flex justify-between bg-secondary drop-shadow-xly" ${
+      className={`" navbar py-4 flex justify-between bg-secondary " ${
         labyrintheToggle && "rotate-90"
-      }`}
+      } ${mauvaisGoutToggle && "bg-black flex"}`}
     >
       <img src={logo} alt="Logo" className="h-20" />
 
@@ -109,6 +109,7 @@ const Navbar = ({ labyrintheToggle }) => {
 
 Navbar.propTypes = {
   labyrintheToggle: PropTypes.bool.isRequired,
+  mauvaisGoutToggle: PropTypes.bool.isRequired,
 };
 
 export default Navbar;

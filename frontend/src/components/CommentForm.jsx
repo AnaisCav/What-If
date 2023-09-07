@@ -1,10 +1,12 @@
-const CommentForm = ({ labyrintheToggle }) => {
+import PropTypes from "prop-types";
+
+const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle }) => {
   return (
     <div
       id="commentaires"
-      className={`"flex items-center justify-center shadow-lg mt-56 mx-8 mb-4 rotate-90 self-start" ${
+      className={`" flex items-center justify-center shadow-lg mt-56 mx-8 mb-4 " ${
         labyrintheToggle && "rotate-90"
-      }`}
+      } ${mauvaisGoutToggle && "bg-blue-500 "}`}
     >
       <form className="w-full  bg-white rounded-lg px-4 pt-2 ">
         <div className="flex flex-wrap -mx-3 mb-6 ">
@@ -32,6 +34,11 @@ const CommentForm = ({ labyrintheToggle }) => {
       </form>
     </div>
   );
+};
+
+CommentForm.propTypes = {
+  labyrintheToggle: PropTypes.bool.isRequired,
+  mauvaisGoutToggle: PropTypes.bool.isRequired,
 };
 
 export default CommentForm;
