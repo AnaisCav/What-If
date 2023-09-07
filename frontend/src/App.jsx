@@ -24,11 +24,12 @@ function App() {
   const handleALenverClick = () => {
     setALenver(!aLenver);
   };
+
   return (
     <div
       className={` ${aLenver && "rotate-180 cursor-none"} ${
         mauvaisGoutToggle && " bg-lime-900"
-      }`}
+      } ${zoomToggle && "text-9xl"}`}
     >
       <div className={`"sticky top-0 w-full z-50" ${aLenver && "fix"}`}>
         <Navbar

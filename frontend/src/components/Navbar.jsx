@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 import logo from "../assets/images/logo2.png";
 
-const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToogle }) => {
+const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
   return (
     <nav
       className={`" navbar py-4 flex justify-between bg-secondary " ${
