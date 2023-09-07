@@ -32,9 +32,12 @@ const Forum = ({ labyrintheToggle }) => {
           posts.map((post) => (
             <CardCommentaire
               key={post.id}
+              id={post.id}
               user={post.user}
               content={post.content}
               creationdate={post.creationdate}
+              posts={posts}
+              setPosts={setPosts}
             />
           ))}
       </div>
