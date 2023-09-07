@@ -1,8 +1,14 @@
 import logo from "../assets/images/logo.png";
 
-const Navbar = () => {
+const Navbar = ({ labyrintheToggle }) => {
   return (
-    <div className="navbar flex justify-between bg-primary">
+    <div
+      className={`${
+        labyrintheToggle
+          ? "navbar flex justify-between bg-primary transform rotate-90 self-start"
+          : "navbar flex justify-between bg-primary"
+      }`}
+    >
       <img src={logo} alt="Logo" className="h-20" />
 
       <ul className="menu menu-horizontal bg-base-200 rounded-box  ">
