@@ -2,22 +2,33 @@ import Navbar from "./components/Navbar";
 import Toggle from "./components/Toggle";
 import Description from "../src/components/Description";
 import Forum from "./components/Forum";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index.css";
 import Footer from "./components/ Footer";
 import CommentForm from "./components/CommentForm";
+import InverseMouseCursor from "./components/InverseMouseCursor";
 
 function App() {
   const [labyrintheToggle, setLabyrintheToggle] = useState(false);
+
+  const [aLenver, setALenver] = useState(false);
+
   const [mauvaisGoutToggle, setMauvaisGoutToggle] = useState(false);
 
   const handleLabyrintheClick = () => {
     setLabyrintheToggle(!labyrintheToggle);
   };
 
+  const handleALenverClick = () => {
+    setALenver(!aLenver);
+  };
   return (
-    <div className={`"" ${mauvaisGoutToggle && " bg-lime-900"}`}>
-      <div className="sticky top-0 w-full z-50">
+    <div
+      className={` ${aLenver && "rotate-180 cursor-none"} ${
+        mauvaisGoutToggle && " bg-lime-900"
+      }`}
+    >
+      <div className={`"sticky top-0 w-full z-50" ${aLenver && "fix"}`}>
         <Navbar
           labyrintheToggle={labyrintheToggle}
           mauvaisGoutToggle={mauvaisGoutToggle}
@@ -27,8 +38,11 @@ function App() {
           onLabyrintheButtonClick={handleLabyrintheClick}
           mauvaisGoutToggle={mauvaisGoutToggle}
           setMauvaisGoutToggle={setMauvaisGoutToggle}
+          aLenver={aLenver}
+          onALenverButtonClick={handleALenverClick}
         />
       </div>
+      {aLenver && <InverseMouseCursor />} {InverseMouseCursor}
       <Description
         labyrintheToggle={labyrintheToggle}
         mauvaisGoutToggle={mauvaisGoutToggle}
