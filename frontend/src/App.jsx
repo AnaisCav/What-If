@@ -6,9 +6,11 @@ import "./index.css";
 
 function App() {
   return (
-    <div className="w-screen min-h-screen  bg-primary">
-      <Navbar />
-      <Toggle />
+    <div className="relative w-screen min-h-screen  bg-primary">
+      <div className="sticky top-0 w-full z-50">
+        <Navbar />
+        <Toggle />
+      </div>
       <Description />;
       <Forum />
     </div>

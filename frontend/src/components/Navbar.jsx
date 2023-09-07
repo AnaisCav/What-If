@@ -1,22 +1,45 @@
-import logo from "../assets/images/logo.png";
+import { Link } from "react-scroll";
+
+import logo from "../assets/images/logo2.png";
 
 const Navbar = () => {
   return (
-    <div className="navbar flex justify-between bg-primary">
+    <nav className="navbar py-4 flex justify-between bg-secondary drop-shadow-xl">
       <img src={logo} alt="Logo" className="h-20" />
 
-      <ul className="menu menu-horizontal bg-base-200 rounded-box  ">
-        <li>
-          <a className="hover:text-red-500">Histoire</a>
-        </li>
-        <li>
-          <a className="hover:text-red-500">Forum</a>
-        </li>
-        <li>
-          <a className="hover:text-red-500">Commentaires</a>
-        </li>
+      <ul className="hidden lg:flex gap-14 font-megrim text-accent font-extrabold text-2xl pr-8 ">
+        <Link
+          to="description"
+          spy={true}
+          smooth={true}
+          offset={-300}
+          duration={500}
+          className="cursor-pointer"
+        >
+          <li className="hover:text-primary">Histoire</li>
+        </Link>
+        <Link
+          to="forum"
+          spy={true}
+          smooth={true}
+          offset={-250}
+          duration={500}
+          className="cursor-pointer"
+        >
+          <li className="hover:text-primary">Forum</li>
+        </Link>
+        <Link
+          to="commentaires"
+          spy={true}
+          smooth={true}
+          offset={-250}
+          duration={500}
+          className="cursor-pointer"
+        >
+          <li className="hover:text-primary">Commentaires</li>
+        </Link>
       </ul>
-    </div>
+    </nav>
   );
 };
 
