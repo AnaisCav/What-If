@@ -1,6 +1,6 @@
 const Toggle = () => {
   return (
-    <div className="flex justify-around bg-primary pt-2 pb-4 drop-shadow-xl">
+    <div className="z-1 flex justify-around bg-primary pt-2 pb-4 drop-shadow-xl">
       <div className="flex flex-col items-center">
         <p className="text-black">Tête à l&apos;envers</p>
         <input
