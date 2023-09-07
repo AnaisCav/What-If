@@ -9,7 +9,7 @@ const Description = ({ labyrintheToggle }) => {
     <div
       id="description"
       className={`"text-black mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent rounded-2xl" ${
-        labyrintheToggle && "rotate-90"
+        labyrintheToggle && "animate-spin-slow"
       }`}
     >
       <h1 className="font-megrim text-4xl lg:text-5xl font-bold lg:px-16 mb-4 text-center lg:text-left">
@@ -49,7 +49,7 @@ const Description = ({ labyrintheToggle }) => {
       >
         En savoir plus &gt;&gt;
       </button>
-      <Histoire />
+      <Histoire labyrintheToggle={labyrintheToggle} />
     </div>
   );
 };

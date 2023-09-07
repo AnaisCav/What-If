@@ -5,7 +5,7 @@ const Toggle = ({ labyrintheToggle, onLabyrintheButtonClick }) => {
   return (
     <div
       className={`"z-1 flex justify-around bg-primary pt-2 pb-4 drop-shadow-xl" ${
-        labyrintheToggle && "rotate-90"
+        labyrintheToggle && "animate-spin-slow"
       }`}
     >
       <div className="flex flex-col items-center">
