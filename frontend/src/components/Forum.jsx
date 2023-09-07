@@ -3,7 +3,7 @@ import axios from "axios";
 import CardCommentaire from "./CardCommentaire";
 import { useEffect, useState } from "react";
 
-const Forum = () => {
+const Forum = ({ labyrintheToggle }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,11 @@ const Forum = () => {
   return (
     <div
       id="forum"
-      className="text-black py-8 mt-8 lg:mt-20 mx-4 lg:mx-16 px-4 lg:px-16 text-justify border-2 border-accent rounded-2xl"
+      className={`${
+        labyrintheToggle
+          ? "text-black py-8 mt-8 lg:mt-20 mx-4 lg:mx-16 px-4 lg:px-16 text-justify border-2 border-accent rounded-2xl rotate-90 self-start"
+          : "text-black py-8 mt-8 lg:mt-20 mx-4 lg:mx-16 px-4 lg:px-16 text-justify border-2 border-accent rounded-2xl"
+      }`}
     >
       <h1 className="font-megrim text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">
         Forum
