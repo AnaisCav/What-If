@@ -1,6 +1,6 @@
 const Description = () => {
   return (
-    <div className="text-black mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 text-justify border-2 border-accent rounded-2xl">
+    <div className="text-black mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent rounded-2xl">
       <h1 className="font-megrim text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">
         Notre histoire
       </h1>
