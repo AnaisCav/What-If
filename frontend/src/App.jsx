@@ -6,7 +6,7 @@ import "./index.css";
 
 function App() {
   return (
-    <div className="w-screen h-screen  bg-primary">
+    <div className="w-screen min-h-screen  bg-primary">
       <Navbar />
       <Toggle />
       <Description />;
