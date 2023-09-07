@@ -4,7 +4,7 @@ const Footer = ({ labyrintheToggle }) => {
   return (
     <footer
       className={`"relative bottom-0 w-full bg-secondary text-base-content p-4" ${
-        labyrintheToggle && "rotate-90"
+        labyrintheToggle && "animate-spin-slow"
       }`}
     >
       <aside>

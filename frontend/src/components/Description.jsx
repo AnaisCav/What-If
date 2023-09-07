@@ -11,7 +11,7 @@ const Description = ({ labyrintheToggle, mauvaisGoutToggle }) => {
     <div
       id="description"
       className={`" text-black mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent rounded-2xl " ${
-        labyrintheToggle && "rotate-90"
+        labyrintheToggle && "animate-spin-slow"
       } ${
         mauvaisGoutToggle &&
         "lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-blue-200 bg-green-100  rounded-2xl text-yellow-300"
@@ -54,7 +54,10 @@ const Description = ({ labyrintheToggle, mauvaisGoutToggle }) => {
       >
         En savoir plus &gt;&gt;
       </button>
-      <Histoire mauvaisGoutToggle={mauvaisGoutToggle} />
+      <Histoire
+        labyrintheToggle={labyrintheToggle}
+        mauvaisGoutToggle={mauvaisGoutToggle}
+      />
     </div>
   );
 };

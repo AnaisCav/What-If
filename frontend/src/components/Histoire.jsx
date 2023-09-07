@@ -1,12 +1,12 @@
-const Histoire = (mauvaisGoutToggle) => {
+const Histoire = ({ labyrintheToggle, mauvaisGoutToggle }) => {
   const closeModal = () => {
     window.histoire.close();
   };
   return (
     <dialog
       id="histoire"
-      className={`" modal text-slate-950 " ${
-        mauvaisGoutToggle && " text-green-300 "
+      className={`" modal min-w-96 " ${
+        labyrintheToggle && "animate-spin-slow "
       }`}
     >
       <form
