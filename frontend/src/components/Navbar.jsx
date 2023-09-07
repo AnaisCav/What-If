@@ -2,9 +2,15 @@ import { Link } from "react-scroll";
 
 import logo from "../assets/images/logo2.png";
 
-const Navbar = () => {
+const Navbar = ({ labyrintheToggle }) => {
   return (
-    <nav className="navbar py-4 flex justify-between bg-secondary drop-shadow-xl">
+    <nav
+      className={`${
+        labyrintheToggle
+          ? "navbar py-4 flex justify-between bg-secondary drop-shadow-xl rotate-90 self-start"
+          : "navbar py-4 flex justify-between bg-secondary drop-shadow-xly"
+      }`}
+    >
       <img src={logo} alt="Logo" className="h-20" />
 
       <ul className="hidden lg:flex gap-14 font-megrim text-accent font-extrabold text-2xl pr-8 ">

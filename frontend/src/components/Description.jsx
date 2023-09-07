@@ -1,6 +1,6 @@
 import Histoire from "./Histoire";
 
-const Description = () => {
+const Description = ({ labyrintheToggle }) => {
   const openModal = () => {
     window.histoire.showModal();
   };
@@ -8,7 +8,11 @@ const Description = () => {
   return (
     <div
       id="description"
-      className="text-black mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-4 border-2 border-accent rounded-2xl"
+      className={`${
+        labyrintheToggle
+          ? "text-black lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent  rounded-2xl transform rotate-90 self-end"
+          : "text-black mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent rounded-2xl"
+      }`}
     >
       <h1 className="font-megrim text-4xl lg:text-5xl font-bold lg:px-16 mb-4 text-center lg:text-left">
         Notre histoire
