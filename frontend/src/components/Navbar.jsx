@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-scroll";
 
 import logo from "../assets/images/logo2.png";
@@ -106,6 +107,10 @@ const Navbar = ({ labyrintheToggle }) => {
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  labyrintheToggle: PropTypes.bool.isRequired,
 };
 
 export default Navbar;

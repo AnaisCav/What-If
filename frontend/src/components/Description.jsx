@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Histoire from "./Histoire";
 
 const Description = ({ labyrintheToggle }) => {
@@ -54,6 +56,10 @@ const Description = ({ labyrintheToggle }) => {
       <Histoire />
     </div>
   );
+};
+
+Description.propTypes = {
+  labyrintheToggle: PropTypes.bool.isRequired,
 };
 
 export default Description;

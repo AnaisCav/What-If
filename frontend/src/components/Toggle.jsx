@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import PropTypes from "prop-types";
+
+import { useState } from "react";
 
 const Toggle = ({ labyrintheToggle, onLabyrintheButtonClick }) => {
   const handleLabyrintheClick = () => {
@@ -47,6 +49,11 @@ const Toggle = ({ labyrintheToggle, onLabyrintheButtonClick }) => {
       </div>
     </div>
   );
+};
+
+Toggle.propTypes = {
+  labyrintheToggle: PropTypes.bool.isRequired,
+  onLabyrintheButtonClick: PropTypes.func.isRequired,
 };
 
 export default Toggle;
