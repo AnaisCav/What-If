@@ -16,6 +16,7 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
         src={logo}
         alt="Logo"
         className={`" h-20 " ${mauvaisGoutToggle && " rounded-full "}`}
+        tabIndex={1}
       />
 
       <ul className="hidden md:flex gap-14 font-megrim text-accent font-bold  pr-8 ">
