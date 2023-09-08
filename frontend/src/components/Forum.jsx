@@ -15,7 +15,7 @@ const Forum = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
         setPosts(response.data);
       })
       .catch((error) => console.error(error));
-  }, []);
+  }, [posts]);
 
   return (
     <div

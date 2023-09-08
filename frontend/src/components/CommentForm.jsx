@@ -6,6 +6,7 @@ import axios from "axios";
 const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
   const [content, setContent] = useState("");
   const [user, setUser] = useState("");
+  const [postList, setPostList] = useState([]);
 
   const handleContentChange = (e) => {
     setContent(e.target.value);
@@ -15,8 +16,7 @@ const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
     setUser(event.target.value);
   };
 
-  const postContent = (e) => {
-    e.preventDefault();
+  const postContent = () => {
     axios
       .post("http://localhost:8000/message", {
         user,
@@ -24,6 +24,7 @@ const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
       })
       .then((res) => {
         if (res.status === 201) {
+          setPostList([...postList, { user, content }]);
           setUser("");
           setContent("");
         }
