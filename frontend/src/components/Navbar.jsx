@@ -6,15 +6,19 @@ import logo from "../assets/images/logo2.png";
 const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
   return (
     <nav
-      className={`" navbar py-4 flex justify-between bg-secondary " ${
+      className={`" navbar py-4 flex justify-between bg-secondary text-2xl " ${
         labyrintheToggle && "animate-spin-slow"
-      } ${mauvaisGoutToggle && " bg-pink-800 hover:text-red-700 "} ${
-        zoomToggle && "text-9xl"
-      }`}
+      } ${
+        mauvaisGoutToggle && " navbar flex bg-pink-700 hover:text-blue-500 "
+      } ${zoomToggle && "text-sm"}`}
     >
-      <img src={logo} alt="Logo" className="h-20" />
+      <img
+        src={logo}
+        alt="Logo"
+        className={`" h-20 " ${mauvaisGoutToggle && " rounded-full "}`}
+      />
 
-      <ul className="hidden md:flex gap-14 font-megrim text-accent font-bold text-2xl pr-8 ">
+      <ul className="hidden md:flex gap-14 font-megrim text-accent font-bold  pr-8 ">
         <Link
           to="description"
           spy={true}
@@ -23,7 +27,13 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
           duration={500}
           className="cursor-pointer"
         >
-          <li className="hover:text-primary">Histoire</li>
+          <li
+            className={`"hover:text-primary" ${
+              mauvaisGoutToggle && "hover:text-red-700"
+            }`}
+          >
+            Histoire
+          </li>
         </Link>
         <Link
           to="forum"
@@ -33,7 +43,13 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
           duration={500}
           className="cursor-pointer"
         >
-          <li className="hover:text-primary">Forum</li>
+          <li
+            className={`"hover:text-primary" ${
+              mauvaisGoutToggle && "hover:text-red-700"
+            }`}
+          >
+            Forum
+          </li>
         </Link>
         <Link
           to="commentaires"
@@ -43,7 +59,13 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
           duration={500}
           className="cursor-pointer"
         >
-          <li className="hover:text-primary">Commentaires</li>
+          <li
+            className={`"hover:text-primary" ${
+              mauvaisGoutToggle && "hover:text-red-700"
+            }`}
+          >
+            Commentaires
+          </li>
         </Link>
       </ul>
       <div className="dropdown md:hidden">

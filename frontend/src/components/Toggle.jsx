@@ -33,7 +33,7 @@ const Toggle = ({
       } ${
         mauvaisGoutToggle &&
         "z-1 flex justify-around bg-purple-600 text-red-700 pt-2 pb-4 drop-shadow-xl"
-      } ${zoomToggle && "text-9xl"}`}
+      } ${zoomToggle && " text-xs"}`}
     >
       <div className="flex flex-col items-center">
         <p className="">Tête à l&apos;envers</p>
@@ -82,6 +82,8 @@ Toggle.propTypes = {
   setMauvaisGoutToggle: PropTypes.func,
   zoomToggle: PropTypes.bool.isRequired,
   setZoomToggle: PropTypes.func,
+  aLenver: PropTypes.bool.isRequired,
+  onALenverButtonClick: PropTypes.func,
 };
 
 export default Toggle;
