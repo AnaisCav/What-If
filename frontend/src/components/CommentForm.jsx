@@ -77,7 +77,7 @@ const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
               type="button"
               className={`" btn bg-white hover:bg-secondary hover:text-primary hover:border-accent border-2 border-accent rounded-2xl text-accent font-roboto text-lg lg:text-xl " ${
                 mauvaisGoutToggle && " bg-blue-800 text-blue-500"
-              }`}
+              } ${zoomToggle && "text-custom"}`}
               onClick={postContent}
             >
               Post Comment
