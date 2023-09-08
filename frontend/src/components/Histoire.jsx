@@ -12,14 +12,14 @@ const Histoire = ({
   return (
     <dialog
       id="histoire"
-      className={`" modal min-w-96 " ${
+      className={`" modal min-w-96 h-[36rem]  " ${
         labyrintheToggle && "animate-spin-slow "
       } ${mauvaisGoutToggle && "text-white bg-yellow-200 bg-opacity-60"}
-      ${aLenver && "rotate-180"} ${zoomToggle && "text-custom"}`}
+      ${aLenver && "rotate-180"} ${zoomToggle && " text-custom "}`}
     >
       <form
         method="dialog"
-        className="modal-box bg-primary h-[36rem]  mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-4 border-2 border-accent rounded-none"
+        className="modal-box bg-primary  mt-8 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-4 border-2 border-accent rounded-none"
       >
         <h1 className="font-megrim text-4xl lg:text-5xl font-bold lg:px-16 mb-4 text-center lg:text-left">
           Notre histoire
@@ -131,6 +131,7 @@ Histoire.propTypes = {
   labyrintheToggle: PropTypes.bool.isRequired,
   mauvaisGoutToggle: PropTypes.bool.isRequired,
   zoomToggle: PropTypes.bool.isRequired,
+  aLenver: PropTypes.bool.isRequired,
 };
 
 export default Histoire;
