@@ -8,7 +8,7 @@ const Footer = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
       } ${
         mauvaisGoutToggle &&
         "bg-yellow-300 text-pink-200 rounded-full h-28 w-[56rem] "
-      } ${zoomToggle && "text-9xl h-fit"}`}
+      } ${zoomToggle && "text-custom h-fit"}`}
     >
       <aside>
         <p>Copyright © 2023 - All right reserved by What if ?</p>

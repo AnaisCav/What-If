@@ -15,7 +15,7 @@ const Histoire = ({
       className={`" modal min-w-96 " ${
         labyrintheToggle && "animate-spin-slow "
       } ${mauvaisGoutToggle && "text-white bg-yellow-200 bg-opacity-60"}
-      ${aLenver && "rotate-180"} ${zoomToggle && "text-9xl"}`}
+      ${aLenver && "rotate-180"} ${zoomToggle && "text-custom"}`}
     >
       <form
         method="dialog"

@@ -9,7 +9,7 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
       className={`" navbar py-4 flex justify-between bg-secondary " ${
         labyrintheToggle && "animate-spin-slow"
       } ${mauvaisGoutToggle && " bg-pink-800 hover:text-red-700 "} ${
-        zoomToggle && "text-9xl"
+        zoomToggle && "text-custom"
       }`}
     >
       <img src={logo} alt="Logo" className="h-20" />

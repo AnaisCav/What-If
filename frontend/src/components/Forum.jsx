@@ -25,7 +25,7 @@ const Forum = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
       } ${
         mauvaisGoutToggle &&
         " text-orange-300 bg-red-200 py-8 mt-8 lg:mt-20 mx-4 lg:mx-16 px-4 lg:px-16 text-justify border-8 border-green-200 rounded-none"
-      } ${zoomToggle && "text-9xl"}`}
+      } ${zoomToggle && "text-custom"}`}
     >
       <h1 className="font-megrim text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">
         Forum

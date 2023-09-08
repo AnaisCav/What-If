@@ -20,7 +20,7 @@ const Description = ({
       } ${
         mauvaisGoutToggle &&
         "lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-blue-200 bg-green-100  rounded-2xl text-yellow-300 flex "
-      } ${zoomToggle && "text-9xl"}`}
+      } ${zoomToggle && "text-custom"}`}
     >
       <h1 className="font-megrim text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">
         Notre histoire

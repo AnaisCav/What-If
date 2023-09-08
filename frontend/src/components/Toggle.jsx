@@ -33,7 +33,7 @@ const Toggle = ({
       } ${
         mauvaisGoutToggle &&
         "z-1 flex justify-around bg-purple-600 text-red-700 pt-2 pb-4 drop-shadow-xl"
-      } ${zoomToggle && "text-9xl"}`}
+      } ${zoomToggle && "text-custom"}`}
     >
       <div className="flex flex-col items-center">
         <p className="">Tête à l&apos;envers</p>
