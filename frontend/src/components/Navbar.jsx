@@ -9,13 +9,14 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
       className={`" navbar py-4 flex justify-between bg-secondary text-2xl " ${
         labyrintheToggle && "animate-spin-slow"
       } ${mauvaisGoutToggle && " navbar flex bg-red-500"} ${
-        zoomToggle && "text-sm"
+        zoomToggle && "text-custom"
       }`}
     >
       <img
         src={logo}
         alt="Logo"
         className={`" h-20 " ${mauvaisGoutToggle && " rounded-full "}`}
+        tabIndex={1}
       />
 
       <ul className="hidden md:flex gap-14 font-megrim text-accent font-bold  pr-8 ">
@@ -26,6 +27,7 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
           offset={-300}
           duration={500}
           className="cursor-pointer"
+          tabIndex={2}
         >
           <li className="hover:text-primary">Histoire</li>
         </Link>
@@ -36,6 +38,7 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
           offset={-250}
           duration={500}
           className="cursor-pointer"
+          tabIndex={3}
         >
           <li className="hover:text-primary">Forum</li>
         </Link>
@@ -46,12 +49,13 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
           offset={-250}
           duration={500}
           className="cursor-pointer"
+          tabIndex={4}
         >
           <li className="hover:text-primary">Commentaires</li>
         </Link>
       </ul>
       <div className="dropdown md:hidden">
-        <label tabIndex={0} className="btn btn-ghost md:hidden">
+        <label tabIndex={2} className="btn btn-ghost md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-10 w-10 text-accent"
@@ -67,10 +71,7 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
             />
           </svg>
         </label>
-        <ul
-          tabIndex={0}
-          className="menu menu-sm dropdown-content mt-[5.5rem] z-[55] text-gray-800 w-96 -right-2 bg-secondary"
-        >
+        <ul className="menu menu-sm dropdown-content mt-[5.5rem] z-[55] text-gray-800 w-96 -right-2 bg-secondary">
           <li className="h-16 border-t-2 font-bold flex justify-center items-end pr-2 border-accent ">
             <Link
               to="description"
@@ -79,6 +80,7 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
               offset={-200}
               duration={500}
               className="cursor-pointer"
+              tabIndex={3}
             >
               Histoire
             </Link>
@@ -91,6 +93,7 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
               offset={-200}
               duration={500}
               className="cursor-pointer"
+              tabIndex={4}
             >
               Forum
             </Link>
@@ -103,6 +106,7 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
               offset={-200}
               duration={500}
               className="cursor-pointer"
+              tabIndex={4}
             >
               Commentaire
             </Link>

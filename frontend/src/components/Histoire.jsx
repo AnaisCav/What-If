@@ -15,7 +15,7 @@ const Histoire = ({
       className={`" modal min-w-96 h-[36rem]  " ${
         labyrintheToggle && "animate-spin-slow "
       } ${mauvaisGoutToggle && "text-white bg-yellow-200 bg-opacity-60"}
-      ${aLenver && "rotate-180"} ${zoomToggle && " text-xs "}`}
+      ${aLenver && "rotate-180"} ${zoomToggle && " text-custom "}`}
     >
       <form
         method="dialog"
@@ -111,6 +111,7 @@ const Histoire = ({
         <button
           type="button"
           onClick={closeModal}
+          tabIndex={12}
           className="btn btn-sm btn-circle bg-primary border-accent text-accent font-bold hover:text-primary hover:bg-accent hover:border-none absolute right-2 top-2"
         >
           ✕

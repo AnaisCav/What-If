@@ -21,22 +21,15 @@ function App() {
   };
   useEffect(() => {
     const handleKeyDown = (e) => {
-      // Vous pouvez choisir n'importe quelle touche que vous souhaitez lier.
       if (e.key === "W") {
         handleALenverClick();
       }
     };
-
-    // Ajoutez un écouteur d'événements pour l'événement keydown lorsque le composant est monté.
     window.addEventListener("keydown", handleKeyDown);
-
-    // Nettoyez l'écouteur d'événements lorsque le composant est démonté.
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [handleALenverClick]);
-
-  // Reste du code inchangé...
 
   const handleLabyrintheClick = () => {
     setLabyrintheToggle(!labyrintheToggle);
@@ -46,7 +39,7 @@ function App() {
     <div
       className={` " relative " ${aLenver && "rotate-180 cursor-none"} ${
         mauvaisGoutToggle && " bg-lime-900"
-      } ${zoomToggle && "text-9xl"}`}
+      } ${zoomToggle && "text-custom"}`}
     >
       <div className="">
         <Navbar

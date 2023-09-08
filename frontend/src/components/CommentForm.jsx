@@ -39,7 +39,7 @@ const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
       className={`"  text-black mb-12 mt-16 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent rounded-2xl text-4xl lg:text-5xl " ${
         labyrintheToggle && "animate-spin-slow"
       } ${mauvaisGoutToggle && " bg-fuchsia-600 text-red-600"} ${
-        zoomToggle && "text-9xl"
+        zoomToggle && "text-custom"
       }`}
     >
       <form className="w-full rounded-lg px-4 pt-2">
