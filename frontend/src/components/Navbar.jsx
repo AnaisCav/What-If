@@ -29,13 +29,7 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
           className="cursor-pointer"
           tabIndex={2}
         >
-          <li
-            className={`"hover:text-primary" ${
-              mauvaisGoutToggle && "hover:text-red-700"
-            }`}
-          >
-            Histoire
-          </li>
+          <li className="hover:text-primary">Histoire</li>
         </Link>
         <Link
           to="forum"
@@ -46,13 +40,7 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
           className="cursor-pointer"
           tabIndex={3}
         >
-          <li
-            className={`"hover:text-primary" ${
-              mauvaisGoutToggle && "hover:text-red-700"
-            }`}
-          >
-            Forum
-          </li>
+          <li className="hover:text-primary">Forum</li>
         </Link>
         <Link
           to="commentaires"
@@ -63,13 +51,7 @@ const Navbar = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
           className="cursor-pointer"
           tabIndex={4}
         >
-          <li
-            className={`"hover:text-primary" ${
-              mauvaisGoutToggle && "hover:text-red-700"
-            }`}
-          >
-            Commentaires
-          </li>
+          <li className="hover:text-primary">Commentaires</li>
         </Link>
       </ul>
       <div className="dropdown md:hidden">

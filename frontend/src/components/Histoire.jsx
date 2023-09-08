@@ -53,32 +53,31 @@ const Histoire = ({
             avaient eu du mal à comprendre ces affections mystérieuses.
           </p>
           <p>
-            La première maladie, baptisée &quot;l&apos;œil inversé&quot;,
-            affectait la vision des malades. Leurs yeux étaient retournés, ce
-            qui leur donnait une perspective étrange. Ils voyaient le monde à
-            l&apos;envers, et cela les rendait désorientés et mal à l&apos;aise.
-            Malheureusement, il n&apos;existait aucun remède pour cette
-            affliction.
+            La première maladie, baptisée Inversencéphalite, affectait la vision
+            des malades. Leurs yeux étaient retournés, ce qui leur donnait une
+            perspective étrange. Ils voyaient le monde à l&apos;envers, et cela
+            les rendait désorientés et mal à l&apos;aise. Malheureusement, il
+            n&apos;existait aucun remède pour cette affliction.
           </p>
           <p>
-            La deuxième maladie, connue sous le nom de &quot;vision loupe&quot;,
-            avait transformé les yeux des malades en de gigantesques loupes.
-            Tout ce qu&apos;ils regardaient était déformé et agrandi, ce qui
-            rendait la perception de la réalité très difficile.{" "}
+            La deuxième maladie, connue sous le nom de UltraZoomoculaire, avait
+            transformé les yeux des malades en de gigantesques loupes. Tout ce
+            qu&apos;ils regardaient était déformé et agrandi, ce qui rendait la
+            perception de la réalité très difficile.
           </p>
           <p>
-            La troisième maladie, appelée &quot;vision latérale&quot;, avait
-            déplacé les yeux des malades sur les côtés de leur tête. Ils ne
-            pouvaient plus voir droit devant eux, ce qui compliquait leur vie
-            quotidienne à bord du vaisseau.{" "}
+            La troisième maladie, appelée Oculovortex, avait déplacé les yeux
+            des malades sur les côtés de leur tête. Ils ne pouvaient plus voir
+            droit devant eux, ce qui compliquait leur vie quotidienne à bord du
+            vaisseau.{" "}
           </p>
           <p>
-            Enfin, la quatrième maladie, nommée &quot;altération
-            sensorielle&quot;, avait altéré les sens des malades. Ils ne
-            pouvaient plus distinguer ce qui était beau de ce qui ne
-            l&apos;était pas, ni même apprécier les plaisirs sensoriels de la
-            même manière que les autres. Ils étaient déconnectés du monde qui
-            les entourait, vivant dans un état perpétuel d&apos;indifférence.{" "}
+            Enfin, la quatrième maladie, nommée Dyschromia Esthetica , avait
+            altéré les sens des malades. Ils ne pouvaient plus distinguer ce qui
+            était beau de ce qui ne l&apos;était pas, ni même apprécier les
+            plaisirs sensoriels de la même manière que les autres. Ils étaient
+            déconnectés du monde qui les entourait, vivant dans un état
+            perpétuel d&apos;indifférence.{" "}
           </p>
           <p>
             Malgré ces maladies étranges et débilitantes, les survivants avaient

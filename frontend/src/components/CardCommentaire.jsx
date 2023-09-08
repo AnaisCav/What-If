@@ -32,19 +32,13 @@ const CardCommentaire = ({
   };
 
   const handleSaveEdit = () => {
-    console.log(updateContent);
     axios
       .put(`${import.meta.env.VITE_BACKEND_URL}/message/${id}`, {
         content: updateContent,
       })
       .then((res) => {
-        if (res.status === 200) {
+        if (res.status === 204) {
           setIsModify(false);
-          setPosts((toto) =>
-            toto.map((zarbi) =>
-              zarbi.id === id ? { ...zarbi, content: updateContent } : zarbi
-            )
-          );
         }
       })
       .catch((error) => {
@@ -59,7 +53,7 @@ const CardCommentaire = ({
 
   return (
     <div
-      className={`" flex flex-col text-black py-4 mt-8 lg:mt-20 mx-4 lg:mx-0 px-4 lg:px-10 border-2 border-accent rounded-2xl " ${
+      className={`flex flex-col text-black py-4 mt-8 lg:mt-20 mx-4 lg:mx-0 px-4 lg:px-10 border-2 border-accent rounded-2xl ${
         mauvaisGoutToggle &&
         "text-yellow-300 rounded-full border-8 border-white border-b-2"
       }`}
@@ -85,7 +79,7 @@ const CardCommentaire = ({
         </div>
       ) : (
         <div className="font-roboto lg:text-xl mt-6 lg:mt-10 mb-2 lg:mb-6">
-          <p>{content}</p>
+          <p>{updateContent}</p>
           <div className="flex justify-end">
             <button
               type="button"
