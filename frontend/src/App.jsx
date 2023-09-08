@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import Toggle from "./components/Toggle";
 import Description from "../src/components/Description";
 import Forum from "./components/Forum";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./index.css";
 import Footer from "./components/ Footer";
 import CommentForm from "./components/CommentForm";
@@ -44,11 +44,11 @@ function App() {
 
   return (
     <div
-      className={` ${aLenver && "rotate-180 cursor-none"} ${
+      className={` " relative " ${aLenver && "rotate-180 cursor-none"} ${
         mauvaisGoutToggle && " bg-lime-900"
       } ${zoomToggle && "text-9xl"}`}
     >
-      <div className={`"sticky top-0 w-full z-50" ${aLenver && "fix"}`}>
+      <div className="">
         <Navbar
           labyrintheToggle={labyrintheToggle}
           mauvaisGoutToggle={mauvaisGoutToggle}
