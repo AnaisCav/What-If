@@ -39,7 +39,7 @@ function App() {
     <div
       className={` " relative " ${aLenver && "rotate-180 cursor-none"} ${
         mauvaisGoutToggle && " bg-lime-900"
-      } ${zoomToggle && "text-9xl"}`}
+      } ${zoomToggle && "text-custom"}`}
     >
       <div className="">
         <Navbar
