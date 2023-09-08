@@ -22,10 +22,16 @@ const Description = ({
         "lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-blue-200 bg-green-100  rounded-2xl text-yellow-300 flex "
       } ${zoomToggle && "text-custom"}`}
     >
-      <h1 className="font-megrim text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">
+      <h1
+        className="font-megrim text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left"
+        tabIndex={9}
+      >
         Notre histoire
       </h1>
-      <div className="rounded-box font-roboto text-lg lg:text-2xl">
+      <div
+        className="rounded-box font-roboto text-lg lg:text-2xl"
+        tabIndex={10}
+      >
         <p>
           Il y avait une époque où la Terre était le berceau de l&apos;humanité,
           mais une terrible épidémie avait changé le cours de l&apos;histoire.
@@ -57,7 +63,7 @@ const Description = ({
         onClick={openModal}
         className="font-megrim lg:text-xl font-bold text-right w-full mt-8"
       >
-        En savoir plus &gt;&gt;
+        <p tabIndex={9}>En savoir plus &gt;&gt;</p>
       </button>
       <Histoire
         labyrintheToggle={labyrintheToggle}

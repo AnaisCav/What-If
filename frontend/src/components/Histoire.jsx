@@ -112,6 +112,7 @@ const Histoire = ({
         <button
           type="button"
           onClick={closeModal}
+          tabIndex={12}
           className="btn btn-sm btn-circle bg-primary border-accent text-accent font-bold hover:text-primary hover:bg-accent hover:border-none absolute right-2 top-2"
         >
           ✕
