@@ -37,46 +37,51 @@ const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
   return (
     <div
       id="commentaires"
-      className={`" flex items-center justify-center shadow-lg mt-56 mx-8 mb-4 " ${
+      className={`"  text-black mb-12 mt-16 lg:mt-20 py-8 mx-4 lg:mx-16 px-4 lg:px-16 border-2 border-accent rounded-2xl text-4xl lg:text-5xl " ${
         labyrintheToggle && "animate-spin-slow"
-      } ${mauvaisGoutToggle && ""} ${zoomToggle && "text-9xl"}`}
+      } ${mauvaisGoutToggle && " bg-fuchsia-600 text-red-600"} ${
+        zoomToggle && "text-custom"
+      }`}
     >
-      <form className="w-full  bg-white rounded-lg px-4 pt-2 ">
+      <form className="w-full rounded-lg px-4 pt-2">
         <div className="flex flex-wrap -mx-3 mb-6 ">
-          <h2 className="px-4 pt-3 pb-2 text-gray-800 text-lg">
+          <h2 className="font-megrim font-bold mb-4 text-center lg:text-left">
             Poste ton commentaire
           </h2>
-          <div className="w-full md:w-full px-3 mb-2 mt-2">
-            {" "}
+          <div className="w-full px-3 mb-2 mt-2">
             <textarea
-              className="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-40 h-10 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
+              className={`" border-2 border-accent rounded-2xl px-2 pt-2 font-roboto text-lg lg:text-xl w-full " ${
+                mauvaisGoutToggle && "h-80 w-12 bg-orange-400"
+              }`}
               name="user"
-              placeholder="pseudo..."
+              placeholder="Saisie ton pseudo"
               value={user}
               onChange={handleUserChange}
               required
-            ></textarea>
+            />
           </div>
-          <div className="w-full md:w-full px-3 mb-2 mt-2">
+          <div className="w-full px-3 mb-2 mt-2">
             <textarea
-              className="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
+              className={`" border-2 h-32 border-accent rounded-2xl px-2 pt-2 font-roboto text-lg lg:text-xl w-full " ${
+                mauvaisGoutToggle && "bg-emerald-200 text-yellow-200 h-12 "
+              }`}
               name="body"
-              placeholder="Type Your Comment..."
+              placeholder="Saisie ton commentaire"
               value={content}
               onChange={handleContentChange}
               required
             ></textarea>
           </div>
-          <div className="w-full md:w-full flex items-start px-3">
-            <div className="-mr-1 w-full">
-              <button
-                type="button"
-                className="bg-white text-gray-700 font-medium py-1 px-4 border border-gray-400 rounded-lg tracking-wide mr-1 hover:bg-gray-100"
-                onClick={postContent}
-              >
-                Post Comment
-              </button>
-            </div>
+          <div className="w-full flex mt-2 px-3">
+            <button
+              type="button"
+              className={`" btn bg-white hover:bg-secondary hover:text-primary hover:border-accent border-2 border-accent rounded-2xl text-accent font-roboto text-lg lg:text-xl " ${
+                mauvaisGoutToggle && " bg-blue-800 text-blue-500"
+              }`}
+              onClick={postContent}
+            >
+              Post Comment
+            </button>
           </div>
         </div>
       </form>

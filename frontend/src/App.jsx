@@ -16,22 +16,32 @@ function App() {
   const [mauvaisGoutToggle, setMauvaisGoutToggle] = useState(false);
 
   const [zoomToggle, setZoomToggle] = useState(false);
+  const handleALenverClick = () => {
+    setALenver(!aLenver);
+  };
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "W") {
+        handleALenverClick();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleALenverClick]);
 
   const handleLabyrintheClick = () => {
     setLabyrintheToggle(!labyrintheToggle);
   };
 
-  const handleALenverClick = () => {
-    setALenver(!aLenver);
-  };
-
   return (
     <div
-      className={` ${aLenver && "rotate-180 cursor-none"} ${
+      className={` " relative " ${aLenver && "rotate-180 cursor-none"} ${
         mauvaisGoutToggle && " bg-lime-900"
-      } ${zoomToggle && "text-9xl"}`}
+      } ${zoomToggle && "text-custom"}`}
     >
-      <div className={`"sticky top-0 w-full z-50" ${aLenver && "fix"}`}>
+      <div className="">
         <Navbar
           labyrintheToggle={labyrintheToggle}
           mauvaisGoutToggle={mauvaisGoutToggle}

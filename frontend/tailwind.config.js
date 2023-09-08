@@ -14,6 +14,9 @@ export default {
       roboto: ["Roboto"],
       megrim: ["Megrim"],
     },
+    fontSize: {
+      custom: "4px",
+    },
   },
   daisyui: {
     themes: [
