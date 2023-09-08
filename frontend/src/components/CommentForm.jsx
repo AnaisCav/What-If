@@ -62,8 +62,7 @@ const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
           <div className="w-full px-3 mb-2 mt-2">
             <textarea
               className={`" border-2 h-32 border-accent rounded-2xl px-2 pt-2 font-roboto text-lg lg:text-xl w-full " ${
-                mauvaisGoutToggle &&
-                "bg-emerald-200 text-yellow-200 h-12 w-full"
+                mauvaisGoutToggle && "bg-emerald-200 text-yellow-200 h-12 "
               }`}
               name="body"
               placeholder="Saisie ton commentaire"
@@ -76,7 +75,7 @@ const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
             <button
               type="button"
               className={`" btn bg-white hover:bg-secondary hover:text-primary hover:border-accent border-2 border-accent rounded-2xl text-accent font-roboto text-lg lg:text-xl " ${
-                mauvaisGoutToggle && "bg-blue-600 text-blue-500"
+                mauvaisGoutToggle && " bg-blue-800 text-blue-500"
               }`}
               onClick={postContent}
             >
