@@ -2,10 +2,20 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+      },
+      cursor: {
+        none: "none",
+      },
+    },
     fontFamily: {
       roboto: ["Roboto"],
       megrim: ["Megrim"],
+    },
+    fontSize: {
+      custom: "4px",
     },
   },
   daisyui: {
