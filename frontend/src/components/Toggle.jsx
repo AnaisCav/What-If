@@ -42,6 +42,7 @@ const Toggle = ({
           type="checkbox"
           role="switch"
           onClick={handleALenverClick}
+          checked={aLenver}
         />
       </div>
       <div className="flex flex-col items-center">

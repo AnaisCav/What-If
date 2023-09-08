@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import Toggle from "./components/Toggle";
 import Description from "../src/components/Description";
 import Forum from "./components/Forum";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index.css";
 import Footer from "./components/ Footer";
 import CommentForm from "./components/CommentForm";
@@ -21,22 +21,15 @@ function App() {
   };
   useEffect(() => {
     const handleKeyDown = (e) => {
-      // Vous pouvez choisir n'importe quelle touche que vous souhaitez lier.
       if (e.key === "W") {
         handleALenverClick();
       }
     };
-
-    // Ajoutez un écouteur d'événements pour l'événement keydown lorsque le composant est monté.
     window.addEventListener("keydown", handleKeyDown);
-
-    // Nettoyez l'écouteur d'événements lorsque le composant est démonté.
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [handleALenverClick]);
-
-  // Reste du code inchangé...
 
   const handleLabyrintheClick = () => {
     setLabyrintheToggle(!labyrintheToggle);
