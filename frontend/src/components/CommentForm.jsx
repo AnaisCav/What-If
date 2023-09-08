@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import axios from "axios";
 
-const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle }) => {
+const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle, zoomToggle }) => {
   const [content, setContent] = useState("");
   const [user, setUser] = useState("");
 
@@ -38,7 +38,7 @@ const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle }) => {
       id="commentaires"
       className={`" flex items-center justify-center shadow-lg mt-56 mx-8 mb-4 " ${
         labyrintheToggle && "animate-spin-slow"
-      } ${mauvaisGoutToggle && ""}`}
+      } ${mauvaisGoutToggle && ""} ${zoomToggle && "text-9xl"}`}
     >
       <form className="w-full  bg-white rounded-lg px-4 pt-2 ">
         <div className="flex flex-wrap -mx-3 mb-6 ">
@@ -86,6 +86,7 @@ const CommentForm = ({ labyrintheToggle, mauvaisGoutToggle }) => {
 CommentForm.propTypes = {
   labyrintheToggle: PropTypes.bool.isRequired,
   mauvaisGoutToggle: PropTypes.bool.isRequired,
+  zoomToggle: PropTypes.bool.isRequired,
 };
 
 export default CommentForm;
