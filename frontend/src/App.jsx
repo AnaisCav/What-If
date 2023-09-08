@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import Toggle from "./components/Toggle";
 import Description from "../src/components/Description";
 import Forum from "./components/Forum";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index.css";
 import Footer from "./components/ Footer";
 import CommentForm from "./components/CommentForm";
